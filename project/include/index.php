@@ -1,0 +1,14 @@
+<?php 
+session_start();
+if($_SESSION['login']){
+    $session=$_SESSION['login'];
+    $username=$_SESSION['username'];
+    if($username==='Daniels'){
+      header("Location:../adminhome.php");
+    }else{
+        header("Location:../userhome.php");
+    }
+}else{
+    header("Location:../login.php");
+}
+?>
